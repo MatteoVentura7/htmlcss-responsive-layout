@@ -22,7 +22,12 @@ body {
 }
 
 main {
-    padding: 26px;
+    padding: 1.625rem;
+}
+
+.btn-eff:hover {
+    background-color: yellow;
+    transition: 0.7s;
 }
 
 /*----------------
@@ -46,18 +51,18 @@ main {
 
 h1 {
     font-family: "Nerko One", cursive;
-    font-size: 46px;
-    text-shadow: 1px 1px 2px #333;
+    font-size: 2.875rem;
+    text-shadow: .0625rem .0625rem .125rem #333;
 }
 
 h2 {
     color: #4e3969;
-    font-size: 28px;
+    font-size: 1.75rem;
 }
 
 .presentation h2 {
     color: black;
-    font-size: 28px;
+    font-size: 1.75rem;
     padding-bottom: 1.25rem;
 }
 
@@ -119,14 +124,16 @@ header {
     padding: 1.5625rem;
 }
 
-ul {
+.col-details ul {
     list-style: none;
     padding-top: 1.875rem;
 }
 
-li {
-    line-height: 2;
+.col-details li {
+    padding-top: 1.25rem;
 }
+
+
 
 /*-----------------
     SECTION BTN-SOCIAL
@@ -135,29 +142,36 @@ li {
 .col-btn {
     width: 100%;
     padding-top: 1.875rem;
-}
-
-
-
-.btn-social .col-banner {
-    width: 100%;
-    padding-top: 1.875rem;
     padding-bottom: 1.875rem;
 }
+
+.btn-social .col-banner {
+    display: none;
+}
+
+
 
 .btn {
     background-color: white;
     font-family: inherit;
     border: none;
     border-radius: .9375rem;
-    padding: 6px 12px;
+    padding: .375rem .75rem;
     cursor: pointer;
+    max-width: 100%;
     
 }
 
+.col-btn ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.25rem;
+}
+
 .btn-large {
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: .625rem 1.25rem;
+    font-size: 1rem;
 }
 
 .col-btn span {
@@ -174,7 +188,7 @@ button {
 ------------------*/
 
 .img-tiramisu {
-    width: 300px;
+    width: 18.75rem;
     margin: auto;
     display: block;
     padding-right: .625rem;
@@ -182,14 +196,64 @@ button {
 
 .details-img {
     padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
 }
 
+/*------------------
+    FOOTER
+------------------*/
+footer {
+    background-color: #7C69A4;
+    padding: 1.25rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    /* justify-content: space-between; */
+}
+
+footer .footer-left {
+    align-items: center; 
+}
+
+footer .footer-right {
+    display: flex;
+}
+
+
+.footer-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    justify-content: center;
+}
+
+.footer-nav ul a {
+    text-decoration: none;
+    color: inherit
+}
+
+footer h4 {
+    padding-bottom: 1.25rem;
+}
 
 
 /*-----------------
     RESPONSIVE
 ------------------*/
 
+/*-----------------
+    Large mobile (bonus) da 576px a infinito
+------------------*/
+@media screen and (min-width: 36rem) {
+    .btn {
+       
+        width: 5.625rem;
+         
+     }
+     }
 /*-----------------
     Tablet da 768px a infinito
 ------------------*/
@@ -203,22 +267,43 @@ button {
         display: inline;
      }
 
-     ul {
+     .btn {
+       
+       width: 8.125rem;
+        
+    }
+
+     .col-details ul {
         display: flex;
         flex-wrap: wrap;
+        gap: 3.75rem;
+        
     }
 
-    li {
-        padding-right: 100px;
-    }
+    .btn-social .col-banner {
+        width: 100%;
+        display: inline;
+        padding-bottom: 1.875rem;
+    } 
 
     .col-btn span {
-        display: inline;
+        display: none;
      } 
+
+     .col-btn ul {
+       gap: .625rem;
+    }
 
      .img-tiramisu {
         float: left
     }
+
+    footer .footer-right {
+        justify-content: center;
+        align-items: center;
+    }
+
+  
      
 }
 
@@ -236,11 +321,36 @@ button {
         width: 30%;
     }
 
-    ul {
+    .col-details ul {
         display: block;
     }
 
-    li {
-        padding-right: 0rem;
+    .col-btn span {
+        display: inline;
+     } 
+
+     .btn {
+       
+        width: 11.25rem;
+         
+     }
+
+     .col-btn ul {
+        gap: .3125rem;
+     }
+
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; 
+    }
+
+    footer .footer-left {
+        text-align: left; 
+    }
+
+    footer .footer-right {
+        text-align: right; 
     }
 }
+
