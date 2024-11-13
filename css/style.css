@@ -55,6 +55,21 @@ h2 {
     font-size: 28px;
 }
 
+.presentation h2 {
+    color: black;
+    font-size: 28px;
+    padding-bottom: 1.25rem;
+}
+
+.presentation p {
+   line-height: 1.8;
+}
+
+hr {
+    color: orange;
+    width: 20%;
+}
+
 h3 {
     font-weight: 300;
     text-transform: uppercase;
@@ -104,12 +119,6 @@ header {
     padding: 1.5625rem;
 }
 
-.img-tiramisu {
-    width: 300px;
-    margin: auto;
-    display: block;
-}
-
 ul {
     list-style: none;
     padding-top: 1.875rem;
@@ -118,6 +127,64 @@ ul {
 li {
     line-height: 2;
 }
+
+/*-----------------
+    SECTION BTN-SOCIAL
+------------------*/
+
+.col-btn {
+    width: 100%;
+    padding-top: 1.875rem;
+}
+
+
+
+.btn-social .col-banner {
+    width: 100%;
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
+}
+
+.btn {
+    background-color: white;
+    font-family: inherit;
+    border: none;
+    border-radius: .9375rem;
+    padding: 6px 12px;
+    cursor: pointer;
+    
+}
+
+.btn-large {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.col-btn span {
+    display: none;
+ }
+
+button {
+    gap: 1.875rem;
+ }
+
+
+ /*-----------------
+    SECTION PRESENTATION
+------------------*/
+
+.img-tiramisu {
+    width: 300px;
+    margin: auto;
+    display: block;
+    padding-right: .625rem;
+}
+
+.details-img {
+    padding-top: 1.875rem;
+}
+
+
 
 /*-----------------
     RESPONSIVE
@@ -143,6 +210,14 @@ li {
 
     li {
         padding-right: 100px;
+    }
+
+    .col-btn span {
+        display: inline;
+     } 
+
+     .img-tiramisu {
+        float: left
     }
      
 }
